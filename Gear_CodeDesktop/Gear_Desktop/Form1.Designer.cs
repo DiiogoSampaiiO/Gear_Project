@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.lblName = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.lblName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -89,6 +89,15 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(284, 301);
             this.panel9.TabIndex = 4;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(111, 32);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(0, 17);
+            this.lblName.TabIndex = 4;
+            this.lblName.Visible = false;
             // 
             // txtSenha
             // 
@@ -141,6 +150,7 @@
             this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // panel8
             // 
@@ -238,15 +248,6 @@
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(111, 32);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(0, 17);
-            this.lblName.TabIndex = 4;
-            this.lblName.Visible = false;
             // 
             // Form1
             // 

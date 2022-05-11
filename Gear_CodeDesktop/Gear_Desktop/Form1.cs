@@ -58,14 +58,13 @@ namespace Gear_Desktop
         {
             using (var client = new HttpClient())
             {
-                BindingSource bsDados = new BindingSource();
                 var URI = txtURL_API.Text + use_email;
 
                 HttpResponseMessage response = await client.GetAsync(URI);
-                if (response.IsSuccessStatusCode)
+                if (response.IsSuccessStatusCode) 
                 {
-                    var UsersJsonString = await response.Content.ReadAsStringAsync();
                     Users users = new Users();
+                    var UsersJsonString = await response.Content.ReadAsStringAsync();
                     users = JsonConvert.DeserializeObject<Users>(UsersJsonString);
                     if (txtSenha.Text == users.Usu_password)
                     {
@@ -77,15 +76,17 @@ namespace Gear_Desktop
                     {
                         MessageBox.Show("SENHA INCORRETA !!!");
                     }
-
-
-                    //dgvDados.DataSource = bsDados;
                 }
                 else
                 {
                     MessageBox.Show("Falha ao logar no sistema : " + response.StatusCode);
                 }
             }
+        }
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Form2 newForm2 = new Form2(txtURL_API.Text, txtEmail.Text);
+            newForm2.Show();
         }
     }
 }

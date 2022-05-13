@@ -185,7 +185,7 @@
             this.txtURL_API.Name = "txtURL_API";
             this.txtURL_API.Size = new System.Drawing.Size(272, 23);
             this.txtURL_API.TabIndex = 4;
-            this.txtURL_API.Text = "https://localhost:44388/api/Users/";
+            this.txtURL_API.Text = "https://localhost:44388/api/Users";
             // 
             // panel5
             // 

@@ -7,9 +7,9 @@ namespace Gear_API.Models
         [Key]
         public int Use_code { get; set; }
 
-        //[Required]
+        [Required]
         [StringLength(100)]
-        public string? Use_name { get; set; }
+        public string Use_name { get; set; }
 
         [Required]
         [StringLength(30)]

@@ -58,7 +58,7 @@ namespace Gear_Desktop
         {
             using (var client = new HttpClient())
             {
-                var URI = txtURL_API.Text + "/" + use_email;
+                var URI = txtURL_API.Text + use_email;
 
                 HttpResponseMessage response = await client.GetAsync(URI);
                 if (response.IsSuccessStatusCode) 
@@ -88,6 +88,5 @@ namespace Gear_Desktop
             Form2 newForm2 = new Form2(txtURL_API.Text, txtEmail.Text);
             newForm2.Show();
         }
-
     }
 }
